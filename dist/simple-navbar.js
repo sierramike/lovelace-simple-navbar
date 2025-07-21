@@ -67,14 +67,18 @@ const ot=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?{...e
                                         <div>${e}</div>
                                 </div>
                             `)}}),F`
-            <ha-card style="">
+            <ha-card style="--mdc-icon-size:${null===(e=this._config)||void 0===e?void 0:e.size};">
                 <div class="spaceholder">SimpleNavbar</div>
-                <div class="menu" style="--mdc-icon-size:${null===(e=this._config)||void 0===e?void 0:e.size};background:${null===(n=this._config)||void 0===n?void 0:n.background};font-size:${null===(s=this._config)||void 0===s?void 0:s.fontSize}; ${null==(null===(i=this._config)||void 0===i?void 0:i.fontWeight)?"":`font-weight:${null===(r=this._config)||void 0===r?void 0:r.fontWeight};`} ${null===(o=this._config)||void 0===o?void 0:o.additionalCSS};">
+                <div class="menu" style="background:${null===(n=this._config)||void 0===n?void 0:n.background};font-size:${null===(s=this._config)||void 0===s?void 0:s.fontSize}; ${null==(null===(i=this._config)||void 0===i?void 0:i.fontWeight)?"":`font-weight:${null===(r=this._config)||void 0===r?void 0:r.fontWeight};`} ${null===(o=this._config)||void 0===o?void 0:o.additionalCSS};">
                     ${a}
                 </div>
             </ha-card>
         `}static get styles(){return o`
             ha-card {
+            }
+
+            .spaceholder {
+                height: calc(var(--mdc-icon-size) + 10px);
             }
 
             .menu {
@@ -83,7 +87,7 @@ const ot=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?{...e
                 display: flex;
                 left: var(--mdc-drawer-width, 0px);
                 width: calc(100% - var(--mdc-drawer-width, 100%));
-                top: var(--header-height, 0px);
+                top: calc(var(--kiosk-header-height, var(--header-height)) + env(safe-area-inset-top));
                 align-items: center;
             }
 

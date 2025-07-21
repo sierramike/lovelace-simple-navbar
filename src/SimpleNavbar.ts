@@ -300,9 +300,9 @@ export class SimpleNavbar extends LitElement {
         }
 
         return html`
-            <ha-card style="">
+            <ha-card style="--mdc-icon-size:${this._config?.size};">
                 <div class="spaceholder">SimpleNavbar</div>
-                <div class="menu" style="--mdc-icon-size:${this._config?.size};background:${this._config?.background};font-size:${this._config?.fontSize}; ${this._config?.fontWeight == undefined ? "" : `font-weight:${this._config?.fontWeight};`} ${this._config?.additionalCSS};">
+                <div class="menu" style="background:${this._config?.background};font-size:${this._config?.fontSize}; ${this._config?.fontWeight == undefined ? "" : `font-weight:${this._config?.fontWeight};`} ${this._config?.additionalCSS};">
                     ${items}
                 </div>
             </ha-card>
@@ -314,13 +314,17 @@ export class SimpleNavbar extends LitElement {
             ha-card {
             }
 
+            .spaceholder {
+                height: calc(var(--mdc-icon-size) + 10px);
+            }
+
             .menu {
                 position: fixed;
                 z-index: 1000;
                 display: flex;
                 left: var(--mdc-drawer-width, 0px);
                 width: calc(100% - var(--mdc-drawer-width, 100%));
-                top: var(--header-height, 0px);
+                top: calc(var(--kiosk-header-height, var(--header-height)) + env(safe-area-inset-top));
                 align-items: center;
             }
 

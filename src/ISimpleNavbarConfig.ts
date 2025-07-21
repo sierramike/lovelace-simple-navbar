@@ -20,7 +20,6 @@ export default interface ISimpleNavbarItem {
     navigation_path?: string;
     url_path?: string;
     url_target?: string;
-    path?: string;
     service?: string;
     service_data?: ISimpleNavbarServiceData;
     additionalCSS?: string;
