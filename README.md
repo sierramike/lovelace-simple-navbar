@@ -6,7 +6,7 @@ A simple and modern navigation bar for Home Assistant Lovelace dashboards. Creat
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg?style=for-the-badge)](https://github.com/hacs/integration)
 [![License][license-shield]](LICENSE.md)
 
-![Image of Simple Navbar Card](https://github.com/sierramike/lovelace-simple-navbar/blob/master/.images/simple-navbar.png?raw=true)
+![Image of Simple Navbar Card](https://github.com/sierramike/lovelace-simple-navbar/blob/main/.images/simple-navbar.png?raw=true)
 
 ## Options
 
@@ -88,7 +88,7 @@ Note: As you understand, empty text will not render the item, even if an icon is
 
 This section shows an example of navigation bar yaml code.
 
-![Image of Simple Navbar Card](https://github.com/sierramike/lovelace-simple-navbar/blob/master/.images/simple-navbar.png?raw=true)
+![Image of Simple Navbar Card](https://github.com/sierramike/lovelace-simple-navbar/blob/main/.images/simple-navbar.png?raw=true)
 
 ```
 type: custom:simple-navbar
