@@ -21,6 +21,7 @@ A simple and modern navigation bar for Home Assistant Lovelace dashboards. Creat
 | additionalCSS     | string  | **Optional** | Any additional CSS you wish to add to the card for maximum customization (eg. `border:none`) |  |
 | size              | string  | **Optional** | Size of icon and height of text blocs       | 32px                |
 | fontSize          | string  | **Optional** | Font size of the single line text. Will render as `font-size` CSS property. | `large` |
+| topSpacingOffset  | string  | **Optional** | Additionnal spacing between the navbar and the rest of the content. Can be a negative value. | `0px` |
 | items             | array of objects `SimpleNavbarItem` (see below) | **Required** | List of tabs displayed in the navigation bar | |
 
 For `timeFormat` and `dateFormat`, it can be every format, which is valid in Luxon.

@@ -35,6 +35,9 @@ export class SimpleNavbar extends LitElement {
     public setConfig(config: ISimpleNavbarConfig): void {
         this._config = { ...config, firstLineLayout: { ...config.firstLineLayout }, secondLineLayout: { ...config.secondLineLayout } };
 
+        if (this._config.topSpacingOffset == "" || this._config.topSpacingOffset === undefined)
+            this._config.topSpacingOffset = "0px";
+
         if (this._config.size == "" || this._config.size === undefined)
             this._config.size = "32px";
 
@@ -300,7 +303,7 @@ export class SimpleNavbar extends LitElement {
         }
 
         return html`
-            <ha-card style="--mdc-icon-size:${this._config?.size};">
+            <ha-card style="--mdc-icon-size:${this._config?.size};--top-spacing-offset:${this._config?.topSpacingOffset};">
                 <div class="spaceholder">SimpleNavbar</div>
                 <div class="menu" style="background:${this._config?.background};font-size:${this._config?.fontSize}; ${this._config?.fontWeight == undefined ? "" : `font-weight:${this._config?.fontWeight};`} ${this._config?.additionalCSS};">
                     ${items}
@@ -312,10 +315,12 @@ export class SimpleNavbar extends LitElement {
     static get styles(): CSSResult {
         return css`
             ha-card {
+                background: transparent;
+                border: none;
             }
 
             .spaceholder {
-                height: calc(var(--mdc-icon-size) + 10px);
+                height: calc(var(--mdc-icon-size) + 10px + var(--top-spacing-offset, 0px));
             }
 
             .menu {

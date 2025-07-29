@@ -35,5 +35,6 @@ export default interface ISimpleNavbarConfig {
     additionalCSS?: string;
     size?: string;
     fontSize?: string;
+    topSpacingOffset?: string;
     items?: ISimpleNavbarItem[];
 }
