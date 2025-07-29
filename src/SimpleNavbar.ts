@@ -240,7 +240,7 @@ export class SimpleNavbar extends LitElement {
             this._config.items.forEach((item) => {
                 const text = this.parseText(item.text || "");
                 const secondLine = this.parseText(item.secondLine || "2nd line");
-                const icon = this.parseText(item.icon || "mdi:home-assistant");
+                const icon = this.parseText(item.icon || (item.type == "label" ? "" : "mdi:home-assistant"));
                 const iconTextSpacing = this.parseText(item.iconTextSpacing || "20px");
 
                 const style = this.parseText(`${item.pushToRight ? "margin-left:auto;" : ""} ${item.horizontalPadding == undefined ? "" : `padding-left:${item.horizontalPadding};padding-right:${item.horizontalPadding};`} color:${item.color || "grey"}; ${item.fontSize == undefined ? "" : `font-size:${item.fontSize};`} ${item.fontWeight == undefined ? "" : `font-weight:${item.fontWeight};`} ${item.textAlign == undefined ? "" : `text-align:${item.textAlign};`} cursor:${item.action == undefined ? "default" : "cursor"}; ${item.additionalCSS};`);
