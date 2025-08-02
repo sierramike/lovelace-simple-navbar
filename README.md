@@ -17,7 +17,8 @@ A simple and modern navigation bar for Home Assistant Lovelace dashboards. Creat
 | timeZone          | string  | **Optional** | Time zone to use. For example `Europe/Berlin` | time zone set in your home assistant profile otherwise your browser time zone |
 | timeFormat        | string  | **Optional** | Format of time                              | `HH:mm:ss`          |
 | dateFormat        | string  | **Optional** | Format of date                              | `cccc d LLLL yyyy`  |
-| background        | string  | **Optional** | Background of the card. Can be any valid CSS color (eg. `red`, `#FF0000`, ...) or an url to an image (eg. `url('http://path.to/image.jpg'`) | |
+| selectedColor     | string  | **Optional** | Color of the selected item. Can be any valid CSS color (eg. `red`, `#FF0000`, ...) | Theme primary accent color |
+| background        | string  | **Optional** | Background of the card. Can be any valid CSS color (eg. `red`, `#FF0000`, ...) or an url to an image (eg. `url('http://path.to/image.jpg')`) | |
 | additionalCSS     | string  | **Optional** | Any additional CSS you wish to add to the card for maximum customization (eg. `border:none`) |  |
 | size              | string  | **Optional** | Size of icon and height of text blocs       | 32px                |
 | fontSize          | string  | **Optional** | Font size of the single line text. Will render as `font-size` CSS property. | `large` |
