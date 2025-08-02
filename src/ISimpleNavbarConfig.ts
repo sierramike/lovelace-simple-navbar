@@ -31,6 +31,7 @@ export default interface ISimpleNavbarConfig {
     dateFormat?: string;
     timeZone?: string;
     locale?: string;
+    selectedColor?: string;
     background?: string;
     additionalCSS?: string;
     size?: string;

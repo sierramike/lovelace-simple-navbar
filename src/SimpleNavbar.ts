@@ -44,6 +44,9 @@ export class SimpleNavbar extends LitElement {
         if (this._config.fontSize == "" || this._config.fontSize === undefined)
             this._config.fontSize = "20px";
 
+        if (this._config.selectedColor == "" || this._config.selectedColor === undefined)
+            this._config.selectedColor = "var(--primary-color, #03a9f4)";
+
         if (this._config.background == "" || this._config.background === undefined)
             this._config.background = "var(--primary-background-color, white)";
 
@@ -303,7 +306,7 @@ export class SimpleNavbar extends LitElement {
         }
 
         return html`
-            <ha-card style="--mdc-icon-size:${this._config?.size};--top-spacing-offset:${this._config?.topSpacingOffset};">
+            <ha-card style="--mdc-icon-size:${this._config?.size};--top-spacing-offset:${this._config?.topSpacingOffset};--selected-color:${this._config?.selectedColor};">
                 <div class="spaceholder">SimpleNavbar</div>
                 <div class="menu" style="background:${this._config?.background};font-size:${this._config?.fontSize}; ${this._config?.fontWeight == undefined ? "" : `font-weight:${this._config?.fontWeight};`} ${this._config?.additionalCSS};">
                     ${items}
@@ -359,14 +362,14 @@ export class SimpleNavbar extends LitElement {
             }
 
             .selected {
-                border-bottom: 2px solid var(--primary-color, #03a9f4);
-                color: var(--primary-color, #03a9f4) !important;
+                border-bottom: 2px solid var(--selected-color);
+                color: var(--selected-color) !important;
             }
 
             .selected:hover {
                 background: #DDDDDD;
-                border-bottom: 2px solid var(--primary-color, #03a9f4);
-                color: var(--primary-color, #03a9f4);
+                border-bottom: 2px solid var(--selected-color);
+                color: var(--selected-color) !important;
             }
 
             ha-card > span {
