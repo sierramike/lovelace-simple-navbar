@@ -328,7 +328,7 @@ export class SimpleNavbar extends LitElement {
 
             .menu {
                 position: fixed;
-                z-index: 1000;
+                z-index: 8;
                 display: flex;
                 left: var(--mdc-drawer-width, 0px);
                 width: calc(100% - var(--mdc-drawer-width, 100%));
